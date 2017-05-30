@@ -1,0 +1,256 @@
+.button
+{
+	background: $red-lt-darker;
+	color: $white;
+	font-family: 'rooney_bold';
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+  	text-transform: uppercase;
+  	width:200px;
+  	padding: 10px 0;
+  	margin: 20px auto 25px auto;
+  	border-radius: 2px;
+  	display:none;
+
+  	&:hover
+  	{
+  		background: $red-lt;
+  	}
+
+  	i 
+  	{
+  		margin-left: 5px;
+  	}
+
+  	@include breakpoint(sm) {  
+		display: block;
+	}
+}
+
+.card-container
+{
+  width: 100%;
+  //padding: 0 $padding; 
+  padding-top: 20px;
+  background: $white;
+
+  .card-container__title
+  {
+    @extend h1;
+    color: $red-lt-darker;
+    //color: lighten($black, 50%);
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 30px;
+
+    &:first-child
+    {
+      margin-top: 0;
+    }
+  }
+}
+
+.card
+{
+  width: 100%;
+  //height: 120px;
+  background: $white;
+  cursor: pointer;
+  overflow: auto;
+  margin-bottom: 20px;
+ @include linear-gradient(to right, $white 0%, $white 50%, $red-lt-darker 50%, $red-lt-darker 100%);
+      background-repeat: repeat;
+      -webkit-background-size: 200% 100%;
+      -moz-background-size: 200% 100%;
+      background-size: 200% 100%;
+      @include transition (all $transition-speed/3 ease-in-out);
+
+  &:hover
+  {
+    //background: $red-lt-darker;
+    color: $white;
+    // @include transform(scale(1.1));
+    background-position: -100% 0;
+  }
+
+  &.is-active
+  {
+    //background: $red-lt-darker;
+    background-position: -100% 0;
+    color: $white;
+  }
+
+  // &.fade
+  // {
+  //   opacity: 0.8;
+  // }
+
+  &__header
+  {
+    //height: 100%;
+    width: 20%;
+    float: left;
+    margin-right: 4%;
+
+    img 
+    {
+      //height:100%;
+      width: 100%;
+      height: auto;
+      margin-right: 10px;
+      border-radius: 2px;
+    }
+  }
+
+  &__body
+  {
+    width: 76%;
+    float:left;
+    p 
+    {
+      float: left;
+      // width: 100%;
+      display: inline-block;
+      margin: 5px 0 0 0;
+
+      span.uppercase 
+      {
+        font-family: 'ratio_medium';
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+
+      span
+      {
+        font-size: 14px;
+      }
+
+    }
+  }
+ 
+  
+}
+
+.detail
+{
+  height: 100%;
+  width: 65%;
+  float: left;
+  overflow: auto;
+  //background:yellow;
+  position:fixed;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  @include transform(translateX(-100%));
+  @include transition(all $transition-speed ease-in-out);
+
+  @include breakpoint(sm) {   
+    width:100%;  
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  &.is-visible
+  {
+    @include transform(translateX(0%));
+    @include transition(all $transition-speed ease-in-out);
+  }
+
+  .close
+  {
+    // position: absolute;
+    // top: 40px;
+    // right: 40px;
+    // color: $white;
+    // font-size: 30px;
+    // cursor: pointer;
+
+    position: absolute;
+    font-size: 20px;
+    padding: 6px 10px 8px 10px;
+    border-radius: 2px;
+    // color: $red-lt-darker;
+    color: $white;
+    top: 55px;
+    right: $padding / 2;
+    z-index: 15;
+    cursor: pointer;
+    background: $red-lt-darker;
+
+    &:hover
+    {
+      background: #b80021;
+    }
+  }
+
+  .visualisator
+  {
+    width: 65%;
+    margin: 100px auto 100px auto;
+
+    @include breakpoint(sm) {   
+      width:90%;  
+    }
+
+    &__header
+    {
+      width: 100%;
+      // background: red;
+      overflow: auto;
+
+      &__left
+      {
+        width: 35%;
+        float: left;
+
+        @include breakpoint(xs) {   
+          width:100%;  
+        }
+
+
+        img
+        {
+          width: 100%;
+
+            @include breakpoint(xs) {   
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+          }
+        }
+      }
+
+      &__right
+      {
+        width: 65%;
+        float: left;
+        padding: 20px;
+        color: $white;
+
+        @include breakpoint(xs) {   
+          width:100%;  
+          padding-top: 40px;
+        }
+      }
+    }
+
+    &__body
+    {
+      
+      padding-top: 40px;
+
+      @include breakpoint(xs) {   
+        padding-top: 20px; 
+      }
+
+      p 
+      {
+        font-size: 16px;
+        line-height: 25px;
+        color: darken($white, 15%);
+      }
+    }
+  }
+
+}

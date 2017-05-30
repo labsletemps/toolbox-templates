@@ -1,0 +1,600 @@
+/*Bourbon mixins*/
+@import url("reset.css");
+/*PROCOM reset styles*/
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*Boxes settings*/
+@font-face {
+  font-family: "ratio_medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ratio_medium.eot?#iefix") format("embedded-opentype"), url("../fonts/ratio_medium.woff") format("woff"), url("../fonts/ratio_medium.ttf") format("truetype"), url("../fonts/ratio_medium.svg#ratio_medium") format("svg"); }
+@font-face {
+  font-family: "rooney_light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rooney_light.eot?#iefix") format("embedded-opentype"), url("../fonts/rooney_light.woff") format("woff"), url("../fonts/rooney_light.ttf") format("truetype"), url("../fonts/rooney_light.svg#rooney_light") format("svg"); }
+@font-face {
+  font-family: "rooney_bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/rooney_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/rooney_bold.woff") format("woff"), url("../fonts/rooney_bold.ttf") format("truetype"), url("../fonts/rooney_bold.svg#rooney_bold") format("svg"); }
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+body {
+  margin-top: 57px; }
+  @media (max-width: 768px) {
+    body {
+      margin-top: 40px; } }
+
+img {
+  display: block; }
+
+h1, .card-container .card-container__title {
+  font-size: 36px;
+  font-weight: lighter;
+  font-family: 'ratio_medium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 15px; }
+  h1 i, .card-container .card-container__title i {
+    float: right;
+    top: 0; }
+
+h2 {
+  font-size: 16px;
+  font-weight: lighter;
+  font-family: 'rooney_light';
+  margin-bottom: 10px;
+  line-height: 20px; }
+  h2 span.caret {
+    color: #b80021;
+    margin-right: 5px; }
+  h2 span.maj {
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+p {
+  font-family: 'rooney_light';
+  font-size: 0.9rem;
+  line-height: 23px;
+  margin-bottom: 20px; }
+  p span {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'rooney_bold';
+    font-size: 18px;
+    line-height: 25px; }
+  p.credits {
+    font-size: 12px;
+    line-height: 20px; }
+
+a {
+  color: #b80021;
+  text-decoration: none; }
+  a:hover {
+    color: #6c0013; }
+
+/*Colors, fonts, z-index, breakpoints...*/
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background-color: #ffbb52; }
+
+::selection {
+  background-color: #ffbb52; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*/HTML5 Boilerplate) Clearfix, hidden, visuallyhidden, invisible...*/
+.map-toggle {
+  cursor: pointer;
+  display: none; }
+  @media (max-width: 768px) {
+    .map-toggle {
+      display: block; } }
+
+.carte {
+  height: 100%;
+  width: 65%;
+  float: left;
+  position: fixed; }
+  .carte .back {
+    position: absolute;
+    font-size: 20px;
+    padding: 6px 10px 8px 10px;
+    border-radius: 2px;
+    color: #fff;
+    bottom: 55px;
+    right: 20px;
+    z-index: 15;
+    cursor: pointer;
+    background: #930025; }
+    .carte .back:hover {
+      background: #b80021; }
+  .carte iframe {
+    width: 100%;
+    height: 100%;
+    background: grey; }
+  @media (max-width: 768px) {
+    .carte {
+      width: 100%;
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%);
+      z-index: 10;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+      .carte.is-visible {
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; } }
+  .carte .buttons-group {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 310px;
+    position: absolute;
+    color: #fff;
+    bottom: 80px;
+    left: 50%;
+    z-index: 15;
+    cursor: pointer;
+    overflow: auto; }
+    @media (max-width: 768px) {
+      .carte .buttons-group {
+        bottom: 55px; } }
+    .carte .buttons-group .button {
+      display: block;
+      float: left;
+      font-size: 14px;
+      width: 90px;
+      border-radius: 0;
+      margin: 0;
+      border-right: 1px solid #79001f;
+      box-shadow: inset 1px 0 0 0 #ac002b; }
+      .carte .buttons-group .button.is-active {
+        background: #b80021; }
+      .carte .buttons-group .button:first-child {
+        border-radius: 2px 0 0 2px; }
+      .carte .buttons-group .button:last-child {
+        border-radius: 0 2px 2px 0;
+        border-right: none; }
+
+.infos {
+  height: auto;
+  width: 35%;
+  float: right;
+  z-index: 15;
+  background: #000; }
+  .infos__header {
+    position: relative; }
+    .infos__header img {
+      width: 100%; }
+    .infos__header__label {
+      font-family: 'rooney_bold';
+      position: absolute;
+      bottom: 0;
+      left: 40px;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      background: #b80021;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .infos__header__media {
+      -webkit-animation: pulse 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      -moz-animation: pulse 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      animation: pulse 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+      font-family: 'rooney_bold';
+      text-transform: uppercase;
+      position: absolute;
+      bottom: -26px;
+      right: 40px;
+      background: #323232;
+      padding: 5px 10px;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+      .infos__header__media i {
+        margin-left: 5px; }
+    .infos__header__redlayer {
+      height: 4px;
+      width: 100%;
+      background: #b80021; }
+  .infos__body {
+    width: 100%;
+    padding: 40px;
+    background: #fff; }
+    .infos__body hr {
+      margin-top: 40px;
+      margin-bottom: 15px; }
+  @media (max-width: 768px) {
+    .infos {
+      width: 100%; } }
+
+@keyframes pulse {
+  0% {
+    background: #323232; }
+  50% {
+    background: #727272; }
+  100% {
+    background: #323232; } }
+/*Header, section, article, footer...*/
+.button {
+  background: #930025;
+  color: #fff;
+  font-family: 'rooney_bold';
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: uppercase;
+  width: 200px;
+  padding: 10px 0;
+  margin: 20px auto 25px auto;
+  border-radius: 2px;
+  display: none; }
+  .button:hover {
+    background: #b80021; }
+  .button i {
+    margin-left: 5px; }
+  @media (max-width: 768px) {
+    .button {
+      display: block; } }
+
+.card-container {
+  width: 100%;
+  padding-top: 20px;
+  background: #fff; }
+  .card-container .card-container__title {
+    color: #930025;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 30px; }
+    .card-container .card-container__title:first-child {
+      margin-top: 0; }
+
+.card {
+  width: 100%;
+  background: #fff;
+  cursor: pointer;
+  overflow: auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(left, #fff 0%, #fff 50%, #930025 50%, #930025 100%);
+  background-image: linear-gradient(to right,#fff 0%, #fff 50%, #930025 50%, #930025 100%);
+  background-repeat: repeat;
+  -webkit-background-size: 200% 100%;
+  -moz-background-size: 200% 100%;
+  background-size: 200% 100%;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+  .card:hover {
+    color: #fff;
+    background-position: -100% 0; }
+  .card.is-active {
+    background-position: -100% 0;
+    color: #fff; }
+  .card__header {
+    width: 20%;
+    float: left;
+    margin-right: 4%; }
+    .card__header img {
+      width: 100%;
+      height: auto;
+      margin-right: 10px;
+      border-radius: 2px; }
+  .card__body {
+    width: 76%;
+    float: left; }
+    .card__body p {
+      float: left;
+      display: inline-block;
+      margin: 5px 0 0 0; }
+      .card__body p span.uppercase {
+        font-family: 'ratio_medium';
+        text-transform: uppercase;
+        font-size: 16px; }
+      .card__body p span {
+        font-size: 14px; }
+
+.detail {
+  height: 100%;
+  width: 65%;
+  float: left;
+  overflow: auto;
+  position: fixed;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  @media (max-width: 768px) {
+    .detail {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9); } }
+  .detail.is-visible {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+  .detail .close {
+    position: absolute;
+    font-size: 20px;
+    padding: 6px 10px 8px 10px;
+    border-radius: 2px;
+    color: #fff;
+    top: 55px;
+    right: 20px;
+    z-index: 15;
+    cursor: pointer;
+    background: #930025; }
+    .detail .close:hover {
+      background: #b80021; }
+  .detail .visualisator {
+    width: 65%;
+    margin: 100px auto 100px auto; }
+    @media (max-width: 768px) {
+      .detail .visualisator {
+        width: 90%; } }
+    .detail .visualisator__header {
+      width: 100%;
+      overflow: auto; }
+      .detail .visualisator__header__left {
+        width: 35%;
+        float: left; }
+        @media (max-width: 580px) {
+          .detail .visualisator__header__left {
+            width: 100%; } }
+        .detail .visualisator__header__left img {
+          width: 100%; }
+          @media (max-width: 580px) {
+            .detail .visualisator__header__left img {
+              width: 50%;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 20px; } }
+      .detail .visualisator__header__right {
+        width: 65%;
+        float: left;
+        padding: 20px;
+        color: #fff; }
+        @media (max-width: 580px) {
+          .detail .visualisator__header__right {
+            width: 100%;
+            padding-top: 40px; } }
+    .detail .visualisator__body {
+      padding-top: 40px; }
+      @media (max-width: 580px) {
+        .detail .visualisator__body {
+          padding-top: 20px; } }
+      .detail .visualisator__body p {
+        font-size: 16px;
+        line-height: 25px;
+        color: #d9d9d9; }
+
+/*Buttons, dropdown...*/
+nav {
+  background: #fff; }
+  nav .logo {
+    margin-left: 10px; }
+
+.lt-container {
+  margin-top: 40px !important; }
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/*# sourceMappingURL=main.css.map */

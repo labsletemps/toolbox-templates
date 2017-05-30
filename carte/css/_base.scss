@@ -1,0 +1,185 @@
+//=====================================================================//
+// COLORS
+//=====================================================================//
+$black:#000;
+$white:#fff;
+$twitter:#00aced;
+$facebook:#3d5a98; 
+
+$red-lt: #b80021;
+$red-lt-darker: #930025;
+
+//=====================================================================//
+// FONTS
+//=====================================================================//
+
+// headings
+//@include font-face("ratio_light", "../fonts/ratio_light", $file-formats: eot woff ttf svg); 
+//@include font-face("ratio_reg", "../fonts/ratio_reg", $file-formats: eot woff ttf svg); 
+@include font-face("ratio_medium", "../fonts/ratio_medium", $file-formats: eot woff ttf svg); 
+//@include font-face("ratio_bold", "../fonts/ratio_bold", $file-formats: eot woff ttf svg); 
+
+// paragraphs
+@include font-face("rooney_light", "../fonts/rooney_light", $file-formats: eot woff ttf svg); 
+//@include font-face("rooney_medium", "../fonts/rooney_medium", $file-formats: eot woff ttf svg); 
+@include font-face("rooney_bold", "../fonts/rooney_bold", $file-formats: eot woff ttf svg); 
+
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+//=====================================================================//
+// TRANSITIONS
+//=====================================================================//
+$transition-speed:0.3s;
+$bezier:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+//=====================================================================//
+// SPACES
+//=====================================================================//
+$padding: 40px;
+
+//=====================================================================//
+// Z-INDEX
+//=====================================================================//
+$zHeader: 100;
+$zOverlay: 200;
+$zModal: 300;
+
+
+//=====================================================================//
+// MORE MIXINS
+//=====================================================================//
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 580px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (max-width: 768px) { @content; } 
+  }
+ 
+  @else if $class == md {
+    @media (max-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (max-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+html 
+{
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+
+    
+}
+
+body 
+{
+  margin-top: 57px;
+
+    @include breakpoint(sm) {   
+        margin-top: 40px;
+    }
+}
+
+img
+{
+  display:block;
+}
+
+h1
+{
+  font-size:36px;
+  font-weight: lighter;
+  font-family: 'ratio_medium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom:15px;
+
+  i 
+  {
+    float:right;
+    top:0;
+  }
+}
+
+h2
+{
+  font-size:16px;
+  font-weight: lighter;
+  font-family: 'rooney_light';
+  margin-bottom:10px;
+  line-height: 20px;
+
+  span.caret
+  {
+    color: $red-lt;
+    margin-right: 5px;
+  }
+
+  span.maj
+  {
+    text-transform: uppercase;
+    
+    //text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  // i 
+  // {
+  //   float:right;
+  //   top:0;
+  // }
+}
+
+p 
+{
+  font-family: 'rooney_light';
+  font-size:0.9rem;
+  line-height: 23px;
+  margin-bottom: 20px;
+
+  span
+  {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'rooney_bold';
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &.credits
+  {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+a 
+{
+  color: $red-lt;
+  text-decoration: none;
+
+  &:hover
+  {
+    color: darken($red-lt, 15%);
+  }
+}
+

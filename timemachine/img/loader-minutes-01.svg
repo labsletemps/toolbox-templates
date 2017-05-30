@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="580.539px" height="580.539px" viewBox="0 0 580.539 580.539" enable-background="new 0 0 580.539 580.539"
+	 xml:space="preserve">
+<g id="hours" display="none">
+	<rect x="302.539" y="284.103" display="inline" fill="#FFFFFF" width="195" height="10"/>
+</g>
+<g id="minutes">
+	<polygon fill="#FFFFFF" points="274.647,289.613 173.532,188.498 190.432,173.598 289.547,273.713 	"/>
+</g>
+<g id="bg" display="none">
+	<path display="inline" fill="#FFFFFF" d="M290.27,580.539c-77.534,0-150.427-30.193-205.251-85.018
+		C30.193,440.696,0,367.804,0,290.27c0-77.534,30.193-150.427,85.018-205.252C139.843,30.193,212.736,0,290.27,0
+		c77.534,0,150.427,30.193,205.251,85.018c54.824,54.825,85.019,127.717,85.019,205.251c0,77.534-30.193,150.427-85.019,205.252
+		C440.696,550.346,367.804,580.539,290.27,580.539z M290.27,26c-70.589,0-136.953,27.489-186.867,77.403
+		C53.489,153.317,26,219.681,26,290.27c0,70.589,27.489,136.953,77.403,186.867c49.914,49.913,116.278,77.402,186.867,77.402
+		c70.589,0,136.953-27.489,186.867-77.402c49.913-49.914,77.402-116.277,77.402-186.867c0-70.589-27.489-136.953-77.402-186.867
+		C427.223,53.489,360.858,26,290.27,26z"/>
+	
+		<circle display="inline" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5" stroke-miterlimit="10" cx="290.27" cy="290.27" r="12.707"/>
+</g>
+</svg>

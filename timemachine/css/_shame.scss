@@ -1,0 +1,119 @@
+.brand-nav
+{
+	//background: transparent !important;
+}
+
+ div.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #212121;
+  z-index: 99999; }
+  div.overlay .logo-brand {
+    width: 300px;
+    max-width: 85%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -110%);
+    -moz-transform: translate(-50%, -110%);
+    -ms-transform: translate(-50%, -110%);
+    -o-transform: translate(-50%, -110%);
+    transform: translate(-50%, -110%); }
+  div.overlay .spinner {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 70%);
+
+    // -webkit-animation: bounce 2s infinite ease-in-out;
+    // animation: bounce 2s infinite ease-in-out; 
+
+    	div.clock-wrapper
+    	{
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		-webkit-animation: bounce 1.0s infinite ease-in-out;
+    		animation: bounce 1.0s infinite ease-in-out; 
+
+    		img
+	    	{
+	    		position: absolute;
+
+	    		&.loader-hours
+	    		{
+	    			-webkit-animation: spin-fast 1.5s infinite linear;
+	    			animation: spin-fast 1.5s infinite linear; 
+	    		}
+
+	    		&.loader-minutes
+	    		{
+	    			-webkit-animation: spin-low 18.0s infinite linear;
+	    			animation: spin-low 18.0s infinite linear; 
+	    		}
+	    	} 
+    	}
+
+    	
+
+	}
+  div.overlay .double-bounce1, div.overlay .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #eee; 
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: spin-fast 2.0s infinite;
+    animation: spin-fast 2.0s infinite; }
+  div.overlay .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s; }
+
+
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(1.3) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes spin-fast {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg); } }
+@keyframes spin-fast {
+   0% {
+   	transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
+
+@-webkit-keyframes spin-low {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg); } }
+@keyframes spin-low {
+   0% {
+   	transform: rotate(0deg);
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }

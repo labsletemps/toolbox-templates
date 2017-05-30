@@ -1,0 +1,292 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="AMC Walking Dead Story Sync">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+		{{ block('head_brand') }}
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+		<link href="css/twentytwenty.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" />
+		
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body style="padding-top: {{ navBarOffset }};">
+		{{ block('bar_brand') }}
+
+		<div class="overlay">
+			<img class="logo-brand" src="img/logo-lt-blanc.svg" alt="">
+			<div class="spinner">
+				<div class="clock-wrapper">
+					<img src="img/loader-clock-01.svg" alt="" class="loader-clock">
+					<img src="img/loader-hours-01.svg" alt="" class="loader-hours">
+					<img src="img/loader-minutes-01.svg" alt="" class="loader-minutes">
+				</div>
+			</div>
+		</div> 
+
+		<div class="controls">
+			<button type="button" class="btn btn-default btn-prev"><span class="glyphicon glyphicon-arrow-up"></span><span class="txt"> Précédent</span></button>
+			<br>
+			<button type="button" class="btn btn-default btn-next"><span class="glyphicon glyphicon-arrow-down"></span><span class="txt"> Suivant</span></button>
+		</div>
+
+		<div class="slider">
+
+			<div class="slide">
+				<div class="accueil">
+					<div class="gradient"></div>
+					<div class="titre">
+						<h1>Comment le canton de Vaud s'est transformé</h1>
+						<!-- <h2>Con Mikele J Fox e Julio Abbiateci</h2> -->
+						<p>En trois générations, le territoire du Plateau suisse a été grignoté par l'urbanisation. Nous vous proposons de remonter dans le temps pour observer en images ces transformations.</p>
+						<p class="nomobile">Les photos en noir et blanc, détenues par les Archives cantonales vaudoises, ont été prises entre 1930 et 1960 par Alphonse Kammacher, qui dirigeait l’aérodrome de la Blécherette. De nos jours, un autre pilote-photographe, Jean-Michel Zellweger a photographié les mêmes points de vue.</p>
+						<button type="button" class="btn btn-default btn-lg btn-begin">Remontez dans le temps</button>
+					</div>
+					<img src="img/bg3.jpg" alt="">
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/ecublens1.jpg" alt="">
+					<img src="img/ecublens2.jpg" alt="">
+				</div>
+				<div class="before">1949-1951</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>1/15</span> <strong style="text-transform: uppercase;">Ecublens.</strong> L’implantation de l’Ecole polytechnique fédérale (EPFL) et l’urbanisation avoisinante ont transfiguré le site d’Ecublens. On reconnaît en bas à gauche de l’image l’église de Saint-Sulpice.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/before1.jpg" alt="">
+					<img src="img/after1.jpg" alt="">
+				</div>
+				<div class="before">1958-1961</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>2/15</span> <strong style="text-transform: uppercase;">Etoy.</strong> La première autoroute de Suisse, Lausanne-Genève, a été ouverte pour l’Exposition nationale de 1964. Une vaste zone commerciale a vu le jour en pleine campagne, à proximité du pont sur l’Aubonne (état du chantier en 1960), entre Etoy et Allaman.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/grandson1.jpg" alt="">
+					<img src="img/grandson2.jpg" alt="">
+				</div>
+				<div class="before">1949-1951</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>3/15</span> <strong style="text-transform: uppercase;">Grandson.</strong> Les zones villas et la zone industrielle ont considérablement étendu la petite localité des Tuileries-de-Grandson, sur la rive du lac de Neuchâtel. En arrière-plan, le bourg médiéval de Grandson.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/gland1.jpg" alt="">
+					<img src="img/gland2.jpg" alt="">
+				</div>
+				<div class="before">1949-1951</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>4/15</span> <strong style="text-transform: uppercase;">Gland.</strong> Le village de Gland, qui présentait il y a 50 ans un habitat très dispersé plutôt atypique dans la région, a acquis il y a peu le statut de ville, ayant dépassé les 10 000 habitants.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/lausannecentre1.jpg" alt="">
+					<img src="img/lausannecentre2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>5/15</span> <strong style="text-transform: uppercase;">Lausanne.</strong> Sous le pont Chauderon, la vallée du Flon s’est en bonne partie construite. Au bout du pont à droite, deux édifices controversés d’architecture contemporaine ont vu le jour: le bâtiment administratif (1974) et la «tour» d’Aurelio Galfetti (1987).
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/romanel1.jpg" alt="">
+					<img src="img/romanel2.jpg" alt="">
+				</div>
+				<div class="before">1954-1956</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>6/15</span> <strong style="text-transform: uppercase;">Romanel-sur-Lausanne.</strong> L’une des évolutions les plus visibles du ciel sont bien évidemment la multiplication des zones commerciales dans la périphérie des villes romandes, gourmandes en territoire.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/lavigny1.jpg" alt="">
+					<img src="img/lavigny2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>7/15</span> <strong style="text-transform: uppercase;">Lavigny.</strong> Au cœur de la riche campagne de La Côte vaudoise, le village de Lavigny est marqué par le développement de l’institution réservée à l’hébergement de patients en situation de handicap.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/montreux1.jpg" alt="">
+					<img src="img/montreux2.jpg" alt="">
+				</div>
+				<div class="before">1956-1957</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>8/15</span> <strong style="text-transform: uppercase;">Montreux.</strong> Le Grand Hôtel Suisse Majestic, pour utiliser son nom d’aujourd’hui, est un élément emblématique du tourisme Belle Epoque et continue de marquer la Riviera vaudoise.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/morges1.jpg" alt="">
+					<img src="img/morges2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>9/15</span> <strong style="text-transform: uppercase;">Morges.</strong> A Morges, la campagne est rattrapée par la densité urbaine. Un nouveau gymnase cantonal s’est implanté à côté de l’école d’agriculture de Marcelin, dont les champs restent préservés.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/orbe1.jpg" alt="">
+					<img src="img/orbe2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>10/15</span> <strong style="text-transform: uppercase;">Orbe.</strong> Une zone industrielle d’importance cantonale s’étend aujourd’hui dans la plaine de l’Orbe, à partir des usines Nestlé (et Nespresso). La cheminée de brique a été conservée à titre patrimonial.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/penthalaz1.jpg" alt="">
+					<img src="img/penthalaz2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>11/15</span> <strong style="text-transform: uppercase;">Penthalaz.</strong> L’évolution qu’a connue le village de Penthalaz, ici avec l’arrêt de train de Cossonay-Gare, est typique du développement du Plateau suisse. Au premier plan, les Grands Moulins de Cossonay.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/rivaz1.jpg" alt="">
+					<img src="img/rivaz2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>12/15</span> <strong style="text-transform: uppercase;">Rivaz.</strong> Le bourg viticole de Rivaz se situe au cœur de la zone protégée de Lavaux, dont l’efficacité est démontrée par ces images. Au premier plan, les moulins démolis il y a quelques années. On reconnaît Chexbres, sur les hauts en arrière-plan.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/grandvaux1.jpg" alt="">
+					<img src="img/grandvaux2.jpg" alt="">
+				</div>
+				<div class="before">1949-1951</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>13/15</span> <strong style="text-transform: uppercase;">Grandvaux.</strong> Classé au patrimoine de l’UNESCO depuis 2007, Lavaux a fait l’objet de polémiques récurrentes sur les constructions et le grignotage des terres.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/vevey1.jpg" alt="">
+					<img src="img/vevey2.jpg" alt="">
+				</div>
+				<div class="before">1930-1950</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>14/15</span> <strong style="text-transform: uppercase;">Vevey.</strong> La place de la Grenette, d’une superficie sans équivalent pour une petite ville, accueille tous les quarts de siècle la Fête des vignerons. Hors de ces grandes heures, elle est sert de parking. Les discussions sur son réaménagement reprennent périodiquement.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+
+			<div class="slide">
+				<div class="twentytwenty-container">
+					<img src="img/villeneuve1.jpg" alt="">
+					<img src="img/villeneuve2.jpg" alt="">
+				</div>
+				<div class="before">1957-1958</div>
+				<div class="after">2015-2016</div>
+				<div class="caption">
+					<span>15/15</span> <strong style="text-transform: uppercase;">Villeneuve.</strong> Le paysage de la Riviera vaudoise a été modifié par l’autoroute A9 et le viaduc de Chillon, dont la construction date de 1966-1968. Au premier plan, la réserve naturelle des Grangettes.
+					<div class="credit">A. Kammacher / Aéroport lausanne / Archives Cantonales Vaudoises / J.M. Zellweger</div>
+				</div>
+			</div>
+			
+			<div class="slide">
+				<div class="accueil">
+					<div class="gradient"></div>
+					<div class="titre credits" style="text-align: left;">
+
+						<h3>Comment le canton de Vaud s'est transformé</h3>
+
+						<p>En trois générations, le territoire du Plateau suisse a été grignoté par l'urbanisation. Nous vous proposons de remonter dans le temps pour observer en images ces transformations.</p>
+
+						<p>Les photos en noir et blanc, détenues par les Archives cantonales vaudoises, ont été prises entre 1930 et 1960 par Alphonse Kammacher, qui dirigeait l’aérodrome de la Blécherette. De nos jours, un autre pilote-photographe, Jean-Michel Zellweger a photographié les mêmes points de vue.</p>
+
+						<h3 style="margin-top: 45px;">Crédits</h3>
+						<p>
+							<strong>Photos:</strong> Bidule «Alphonse Kammacher / Aéroport Lausanne / Archives cantonales vaudoises» et «Jean-Michel Zellweger»<br>
+							<strong>Textes:</strong> Yelmarc Roulet<br>
+							<strong>Réalisation web:</strong> César Greppin / Jean Abbiateci
+						</p>
+
+					</div>
+					<img src="img/bg3.jpg" alt="">
+				</div>
+			</div>
+			
+		</div>
+
+		{{ block('footer_brand') }}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="js/jquery.event.move.js"></script>
+    	<script src="js/jquery.twentytwenty.js"></script>
+		 <script src="js/jquery.bxslider.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+       	
+	</body>
+	
+</html>

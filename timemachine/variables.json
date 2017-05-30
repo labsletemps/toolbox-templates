@@ -1,0 +1,15 @@
+{
+	"title": "Comment le canton de Vaud s'est transformé",
+	"description": "Remontez dans le temps et découvrez comment le canton de Vaud s'est transformé",
+	"authors": "Jean Abbiateci, Yelmarc Roulet, César Greppin",
+	"imgSocial": "social.jpg", 
+
+	"navBarStyle": "black",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "http://www.letemps.ch"
+	}
+}

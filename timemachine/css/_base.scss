@@ -1,0 +1,163 @@
+@charset "UTF-8"; 
+//=====================================================================//
+// COLORS
+//=====================================================================//
+$black:#000;
+$white:#fff;
+$twitter:#00aced; 
+$facebook:#3d5a98;   
+
+$red-lt: #b80021;
+$red-lt-darker: #930025;
+
+$gray: #212121; 
+
+//=====================================================================//
+// FONTS
+//=====================================================================//
+
+// headings
+//@include font-face("ratio_light", "../fonts/ratio_light", $file-formats: eot woff ttf svg); 
+//@include font-face("ratio_reg", "../fonts/ratio_reg", $file-formats: eot woff ttf svg); 
+  //@include font-face("ratio_medium", "../fonts/ratio_medium", $file-formats: eot woff ttf svg); 
+  //@include font-face("ratio_bold", "../fonts/ratio_bold", $file-formats: eot woff ttf svg); 
+
+// paragraphs
+  //@include font-face("rooney_light", "../fonts/rooney_light", $file-formats: eot woff ttf svg); 
+//@include font-face("rooney_medium", "../fonts/rooney_medium", $file-formats: eot woff ttf svg); 
+  //@include font-face("rooney_bold", "../fonts/rooney_bold", $file-formats: eot woff ttf svg); 
+
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+//=====================================================================//
+// TRANSITIONS
+//=====================================================================//
+$transition-speed:0.3s;
+$bezier:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+//=====================================================================//
+// DISTANCES
+//=====================================================================//
+$columnW: 700px;
+
+//=====================================================================//
+// Z-INDEX
+//=====================================================================//
+$zHeader: 100;
+$zOverlay: 200;
+$zModal: 300;
+
+
+//=====================================================================//
+// MORE MIXINS
+//=====================================================================//
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 500px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (max-width: 768px) { @content; } 
+  }
+ 
+  @else if $class == md {
+    @media (max-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (max-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+html { background: $white; color: #222; font-size: 17px; line-height: 1.4; height: 100%; }
+body { height: 100%; }
+img { display:block; width: 100%; }
+
+h1
+{
+    
+}
+
+h2
+{
+    
+}
+
+h3
+{
+    
+}
+
+h4
+{
+    
+}
+
+h5
+{
+   
+}
+
+h6 
+{
+    
+}
+
+p 
+{
+   
+}
+
+a 
+{
+    
+}
+
+blockquote
+{
+    &:before 
+    {
+        color: #ccc;
+        content: open-quote;
+        font-size: 60px;
+        line-height: 0.1em;
+        margin-right: 0;
+        vertical-align: -5px;
+        color: $red-lt-darker;        
+    }
+
+    &:after 
+    {
+        color: #ccc;
+        content: close-quote;
+        font-size: 60px;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -5px;
+        color: $red-lt-darker;
+    }
+}
+
+hr 
+{
+    background: $red-lt-darker;
+    height: 4px !important;
+    width: 150px;
+    border-radius: 3px;
+}
+
+

@@ -30,6 +30,10 @@ Exemple: https://labs.letemps.ch/interactive/2016/avant-apres-vaud/
 
 Exemple: https://labs.letemps.ch/interactive/2016/candidats-fr/
 
+
+-----------------
+
+
 Notre code est sous licence MIT. Les différentes librairies tierces sont distribuées sous leurs propres licences
 
 

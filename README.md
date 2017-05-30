@@ -19,9 +19,10 @@ Exemple:https://labs.letemps.ch/interactive/2016/carte-nucleaire-monde/
 ## 3. SLIDER ##
 
 Exemple avec son: https://labs.letemps.ch/interactive/2016/tchernobyl/
-Exemple sans son:https://labs.letemps.ch/interactive/2016/slider-11septembre/
 
-*Ce projet est adapté d'un projet open source de la NPR: https://github.com/nprapps/barkedu* 
+Exemple sans son: https://labs.letemps.ch/interactive/2016/slider-11septembre/
+
+*Ce projet est adapté d'un projet open source de la NPR, sous licence MIT: https://github.com/nprapps/barkedu* 
 
 ## 4. TIMEMACHINE (BEFORE/AFTER) ##
 Exemple: https://labs.letemps.ch/interactive/2016/avant-apres-vaud/

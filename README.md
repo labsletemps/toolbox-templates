@@ -14,7 +14,7 @@ Exemple avec animation: https://labs.letemps.ch/interactive/2016/longread-fioul-
 
 ## 2. CARTE ##
 
-Exemple:https://labs.letemps.ch/interactive/2016/carte-nucleaire-monde/
+Exemple: https://labs.letemps.ch/interactive/2016/carte-nucleaire-monde/
 
 ## 3. SLIDER ##
 

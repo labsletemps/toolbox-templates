@@ -1,0 +1,15 @@
+{
+	"title": "Si la photo etait une epreuve olympique",
+	"description": "La sélection photo du Temps des meilleurs clichés pris aux JO de Rio.",
+	"authors": "Catherine Rüttimann, Lionel Pittet, César Greppin",
+	"imgSocial": "social2.jpg",
+
+	"navBarStyle": "black",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.letemps.ch"
+	}
+}

@@ -1,0 +1,27 @@
+h1 {
+  font-family: 'Oswald' !important;
+  font-size: 72px !important; }
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 72px !important; } }
+  @media screen and (max-width: 481px) {
+    h1 {
+      font-size: 72px !important; } }
+
+.full-block-cell-title {
+  position: absolute !important;
+  bottom: 37%;
+  text-align: left !important; }
+  @media screen and (max-width: 481px) {
+    .full-block-cell-title {
+      text-align: center !important;
+      bottom: 46%; } }
+
+.full-block-content {
+  margin: 0 0 0 auto !important; }
+
+.progress-indicator {
+  top: auto !important;
+  bottom: 0 !important; }
+
+/*# sourceMappingURL=custom.css.map */

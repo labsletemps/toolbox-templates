@@ -6,7 +6,9 @@ Tous ces templates sont responsive, adaptés à la consultation mobile.
 
 **1. LONG FORMAT**
 Exemple avec vidéos: https://labs.letemps.ch/interactive/2016/longread-ski-chine/
+
 Exemple avec photos: https://labs.letemps.ch/interactive/2016/longread-gothard/
+
 Exemple avec animation: https://labs.letemps.ch/interactive/2016/longread-fioul-lourd/
 
 **2. CARTE**

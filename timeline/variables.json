@@ -1,0 +1,15 @@
+{
+	"title": "TITRE ICI",
+	"description": "DESCRIPTION ICI",
+	"authors": "Auteurs ici",
+	"imgSocial": "social.jpg",
+
+	"navBarStyle": "normal",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.letemps.ch"
+	}
+}

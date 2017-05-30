@@ -1,0 +1,293 @@
+//=====================================================================//
+// COLORS
+//=====================================================================//
+$black:#000;
+$white:#fff;
+$twitter:#00aced;
+$facebook:#3d5a98; 
+
+$brand-primary: #b80021;
+$brand-primary-dark: #930025;
+$brand-primary-darker: #45080c;     
+$gray-chic: #323232;
+$gray: #6f7072;
+$gray-light: #9b9d9e;
+$gray-lighter: #f2f2f2; 
+
+//=====================================================================//
+// FONTS
+//=====================================================================//
+
+// headings
+//@include font-face("ratio_light", "../fonts/ratio_light", $file-formats: eot woff ttf svg); 
+//@include font-face("ratio_reg", "../fonts/ratio_reg", $file-formats: eot woff ttf svg); 
+@include font-face("ratio_medium", "../fonts/ratio_medium", $file-formats: eot woff ttf svg); 
+//@include font-face("ratio_bold", "../fonts/ratio_bold", $file-formats: eot woff ttf svg); 
+
+// paragraphs
+@include font-face("rooney_light", "../fonts/rooney_light", $file-formats: eot woff ttf svg); 
+@include font-face("rooney_medium", "../fonts/rooney_medium", $file-formats: eot woff ttf svg); 
+//@include font-face("rooney_medium", "../fonts/rooney_medium", $file-formats: eot woff ttf svg); 
+@include font-face("rooney_bold", "../fonts/rooney_bold", $file-formats: eot woff ttf svg); 
+
+// numbers
+@include font-face("tungsten_medium", "../fonts/tungsten_medium", $file-formats: eot woff ttf svg); 
+
+
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+//=====================================================================//
+// TRANSITIONS
+//=====================================================================//
+$transition-speed:0.5s;
+$bezier:cubic-bezier(0.215, 0.61, 0.355, 1);
+
+//=====================================================================//
+// Z-INDEX
+//=====================================================================//
+$zHeader: 100;
+$zOverlay: 200;
+$zModal: 300;
+
+
+//=====================================================================//
+// MORE MIXINS
+//=====================================================================//
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 580px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (max-width: 768px) { @content; } 
+  }
+ 
+  @else if $class == md {
+    @media (max-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (max-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+html, body
+{
+    //margin:0;padding:0;height:100%;
+}
+
+html 
+{
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    background: #eeeeee;
+    height: 100% !important;
+}
+
+body 
+{
+    color: #47a3da;
+    margin-top: 57px !important;
+
+    @include breakpoint(xs) {   
+        margin-top: 40px !important;
+    }
+}
+
+nav
+{
+    background: $white;
+    padding-left: 10px;
+}
+
+h1
+{
+  font-size:40px;
+  line-height: 45px;
+  //font-weight: lighter;
+  color: $white;
+  font-family: 'ratio_medium', 'Helvetica', 'Arial', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 1px 8px, rgba(0, 0, 0, 0.6) 0px 0px 1px;
+  //font-family: 'ratio_medium';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include breakpoint(md) {   
+    font-size:26px;
+    line-height: 28px;  }
+
+
+    &.big
+    {
+        font-size: 90px;
+        line-height: 90px;
+
+        @include breakpoint(md) {   
+        font-size:40px;
+        line-height: 43px;  }
+    }
+}
+
+    
+
+h2
+{
+    //font-family: 'tungsten_medium';
+    font-family: 'ratio_medium';
+    color: $gray-chic;
+    font-size: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid $brand-primary-dark !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include breakpoint(xs) {   
+        font-size: 20px;
+    }
+}
+
+h3
+{
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+    //font-weight: lighter;
+    font-size: 18px;
+    text-align:center;
+    color: $white;
+    width: 125px;
+    background: $brand-primary;
+    padding: 5px;
+    border-radius: 2px;
+    //padding: 5px 5px 3px 5px;
+    margin-bottom: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include breakpoint(xs) {   
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 20px;
+    }
+}
+
+p 
+{
+    font-family: 'rooney_light';
+    font-size: 17px;
+    line-height: 30px;
+    color: $gray-chic;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // margin-top: 15px;
+
+    @include breakpoint(xs) {   
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    &.chapeau
+    {
+        //font-family: 'rooney_light';
+        font-family: 'rooney_medium', 'Helvetica', 'Arial', sans-serif;
+        color: $white;
+        //font-size: 15px;
+        //line-height: 27px;
+        font-size: 18px;
+        line-height: 30px;
+        text-shadow: rgba(0, 0, 0, 1) 0 1px 8px, rgba(0, 0, 0, 0.6) 0px 0px 1px;
+
+        @include breakpoint(md) {   
+            font-size: 15px;
+            line-height: 27px;
+        }
+
+        &.big
+        {
+            font-size: 26px;
+            line-height: 32px;
+            -webkit-font-smoothing: never;
+            -moz-osx-font-smoothing: never;
+
+            @include breakpoint(md) {   
+                font-size: 15px;
+                line-height: 27px;
+            }
+        }
+       
+    }
+
+    &.legende
+    {
+        text-align: right;
+        margin-bottom: 15px;
+        margin-top: -15px;
+        color: $gray-light;
+        font-size: 14px;
+    }
+}
+
+a 
+{
+    font-family: 'rooney_light';
+    font-size: 17px;
+    line-height: 30px;
+    //margin-top: 20px;
+    color: $brand-primary-dark; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    // margin-top: 15px;
+
+    &:hover
+    {
+        color: $brand-primary-darker;
+    }
+
+    @include breakpoint(xs) {   
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+
+
+time
+{
+    font-family: 'tungsten_medium';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // text-transform: uppercase;
+
+    br
+    {
+        @include breakpoint(xs) {   
+            display: none;  
+        }
+    }
+}
+
+hr 
+{
+    width: 180px !important;
+    margin: 20px auto 20px auto !important;
+    height: 4px !important;
+    background: #b80021 !important;
+    border-top: 1px solid #b80021 !important;
+}
+

@@ -1,0 +1,92 @@
+{% use '_blocks.html.twig' %} 
+
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		{{ block('head_brand') }}
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	</head>
+
+	<body>
+		{{ block('bar_brand') }}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/scrollReveal.min.js"></script>
+		<script src="js/handlebars-v4.0.4.js"></script>
+		<script src="js/main.js"></script>
+		<script id="intro-template" type="text/x-handlebars-template">
+		{% verbatim %}
+		  	<div class="intro-{{ introPosition }}">
+				{{#if introTitleBig}} <h1 class="big">{{ introTitleBig }}</h1> {{/if}}
+				{{#if introTitle}} <h1>{{ introTitle }}</h1> {{/if}}
+				{{#if introDate}} <h3>{{ introDate }}</h3> {{/if}}
+				{{#if introHr}} <hr> {{/if}}
+				{{#if introChapeau}} <p class="chapeau">{{ introChapeau }}</p>	{{/if}}
+				{{#if introChapeauBig}} <p class="chapeau big">{{ introChapeauBig }}</p> {{/if}}
+			</div>
+		{% endverbatim %}
+		</script>
+
+		<script id="entry-template" type="text/x-handlebars-template">
+		{% verbatim %}
+			{{#each entries}}
+		  	<li>
+				<time class="cbp_tmtime" datetime="2013-04-10 18:30">
+				<!-- <span>4/10/13</span> --> <span>{{#if entryDay}} {{ entryDay }} <br>{{/if}}{{#if entryMonth}} {{ entryMonth }} <br>{{/if}}{{ entryYear }}&nbsp</span>
+				</time>
+				<div class="cbp_tmicon"><i class="fa fa-{{ entryIcon }}"></i></div>
+				<div class="cbp_tmlabel" {{#if entryEffect}} data-sr='{{ entryEffect }}'{{/if}}>
+					<h2>{{ entryTitle }}</h2>
+					{{#if entryVideo}} <div class="video-container"><iframe height="auto" src="{{ entryVideo }}?&theme=dark&autohide=2&cc_load_policy=1&showinfo=0"frameborder="0" frameborder="0" allowfullscreen></iframe></div> {{/if}}
+					{{#if entryImage}} <img src="img/{{ entryImage }}" alt=""> {{/if}}
+					{{#if entryImageLegend}} <p class="legende">{{ entryImageLegend }} {{/if}}
+					<p>{{{ entryText }}}</p>
+					{{#if entryLinkText}}
+						<br>
+						<a href="{{ entryLink }}" target="blank"><i class="fa fa-link"></i> {{ entryLinkText }}</a>
+					{{/if}}
+				</div>
+			</li>
+			{{/each}}
+		{% endverbatim %}
+		</script>
+
+		<script id="credits-template" type="text/x-handlebars-template">
+		{% verbatim %}
+		  	<p>{{{ creditsTexte }}}</p>
+		{% endverbatim %}
+		</script>
+	
+		<header class="clearfix">
+			<div class="gradient"></div>
+			<div class="gradient2"></div>
+			<img src="img/header.jpg" alt="">
+			<div class="intro-height">
+				<div class="intro-container">
+					
+				</div>
+			</div>
+		</header>
+
+		<div class="container">
+			<!-- <header class="clearfix">
+				<span>Blueprint</span>
+				<h1>Vertical Timeline</h1>
+				<nav>
+					<a href="http://tympanus.net/Blueprints/ScrollingLayout/" class="icon-arrow-left" data-info="previous Blueprint">Previous Blueprint</a>
+					<a href="http://tympanus.net/codrops/?p=14941" class="icon-drop" data-info="back to the Codrops article">back to the Codrops article</a>
+				</nav>
+			</header>	 -->
+			<div class="main">
+				<ul class="cbp_tmtimeline"></ul>
+				<div class="credits">
+				</div>
+			</div>
+		</div>
+		{{ block('footer_brand') }}
+	</body>
+</html>

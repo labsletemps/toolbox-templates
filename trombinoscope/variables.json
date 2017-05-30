@@ -1,0 +1,15 @@
+{
+	"title": "Qui sera le candidat de la droite française à l'Elysée en 2017?",
+	"description": "Retrouvez ici les 13 postulants de la droite classique, leur parcours, leur programme et leurs casseroles.",
+	"authors": "Florian Delafoi, Catherine Frammery, César Greppin",
+	"imgSocial": "social2.jpg",
+
+	"navBarStyle": "normal",
+	"navBarOffset": "0",
+	"navBarLocked": true,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.letemps.ch"
+	}
+}

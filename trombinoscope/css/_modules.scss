@@ -1,0 +1,602 @@
+div.overlay-content
+{
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	min-height: calc(100% - 57px);
+	background: #4a5456;
+	top: 57px;
+	right: 0;
+	@include transition(all, 0.3s);
+	padding: 3rem;
+	//background-image: url(../img/overlay-bg.jpg);
+	//background-size: cover;
+	//background-position: center center;
+	background: rgba(0, 0, 0, .5);
+
+	@include breakpoint(xs) {   
+        min-height: calc(100% - 40px); 
+        //height: calc(100% - 40px); 
+        top: 40px; 
+        width: 100%;
+        padding: 0;
+    }
+
+
+	&.is-hidden
+	{
+		opacity: 0 !important;
+		@include transition(all, 0.3s);
+	}
+
+	.popup
+	{
+		max-width: 535px;
+		background: $blue-fr;
+		margin: 0 auto 0 auto;
+		padding: 50px 30px 30px 30px;
+		//border-radius: 5px;
+
+		border-top: 5px solid $red-fr;
+ 		//outline: 5px solid $white;
+
+		@include breakpoint(xs) {   
+		    padding: 40px 23px 30px 23px;
+		}
+
+		h3
+		{
+			font-size: 3rem;
+			font-family: 'Poppins';
+			width: 100%;
+			opacity: 1;
+			padding: 0;
+
+			@include breakpoint(xs) {   
+		        font-size: 2em;
+		        line-height: 2.2rem;
+		    }
+		}
+
+		p 
+		{
+			color: $white;
+			//color: darken($white, 15%);
+			font-size: 1.3rem;
+			width: 100%;
+			font-weight: 300;
+
+			-webkit-font-smoothing: antialiased; 
+    		-moz-osx-font-smoothing: grayscale;
+		}
+
+		.btn 
+		{
+			display: table;
+			padding: 16px 20px 14px 20px;
+			color: $white;
+			background: #0071bc;
+			margin: auto;
+			font-size: 1.2rem;
+			line-height: 1.3;
+			border: 3px solid $white;
+			font-family: 'Poppins';
+			cursor: pointer;
+			text-transform: uppercase;
+
+			@include breakpoint(xs) {   
+		       font-size: 1.175em;
+		    }
+
+			&:hover 
+			{
+				background: lighten($blue-fr, 5%);
+				//background: $red-fr;
+			}
+		}
+	}
+
+	
+}
+
+div.card
+{
+	//@include transition(all, 0.3s);
+	width: 17.65rem;
+	//border-radius: 3px;
+	margin: 0 1rem 1rem 0;
+	float: left;
+	// -webkit-box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+	// box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+	cursor: pointer;
+
+	@include breakpoint(xs) {   
+        margin: 0 0 1rem 0;
+        width: calc(100% - 4rem);
+    }
+
+	&:hover div.card-body
+	{
+		background: $white;
+	}
+
+	div.card-header
+	{
+		background: $white;
+
+		
+	}
+
+	div.card-body
+	{
+		padding: 0 0 1rem 0;
+		background: darken($white, 2%);
+		overflow: auto;
+
+		// div.row
+		// {
+		// 	overflow: auto;
+		// 	border-top: 1px solid darken($white, 8%);
+		// 	padding: 1rem 0 1rem 0;
+		// 	overflow: hidden;
+
+			div.card-body-info
+			{
+				text-align: center;
+				margin: 1rem 0 0 0;
+				width: 50%;
+				float: left;
+				color: darken($white, 20%);
+				font-family: 'Helvetica', 'Arial', 'sans serif' !important;
+				//font-family: 'Oswald';
+				font-weight: 300;
+				font-size: 1rem;
+				line-height: 1.8;
+				//overflow: visible;
+
+				.fa 
+				{
+					font-size: 1.2rem;
+				}
+				
+			}
+		// }
+
+		
+	}
+}
+
+//Partis
+div.filter1 h4 { color: $flash2 !important; font-size: 0.9rem; i { font-size: 1rem; } }
+div.filter1-btn-grp
+{
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1rem;
+
+	#slider-range-max 
+	{ 
+		margin: 4px 20px 9px 20px !important; 
+		font-size: 0.6rem !important;
+
+		span 
+		{
+			border: none;
+			border-radius: 50px;
+			background: $flash2 !important;
+			border: 1px solid $flash2 !important;
+			font-size: .8rem;
+		}
+
+		// .ui-state-active
+		// {
+		// 	background: $flash2 !important;
+		// 	border: 1px solid $flash2 !important;
+		// }
+	}
+	
+	div.btn 
+	{
+		cursor: pointer;
+		width: 100%;
+		float:left;
+		font-family: 'Oswald';
+		//color: $white;
+		color: darken($white, 30%);
+		padding: 7px 20px;
+		background-image: rgba(0, 0, 0, 0);
+		-webkit-font-smoothing: antialiased; 
+    	-moz-osx-font-smoothing: grayscale;
+
+		&:hover
+		{
+			background: #4a5456;
+		}
+
+		&.is-active
+		{
+			background: $flash2;
+			color: $white;
+		}
+	}
+}
+
+//Pronostics
+div.filter2 h4 { color: $flash1 !important; font-size: 0.9rem; i { font-size: 1rem; } }
+div.filter2-btn-grp
+{
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1rem;
+
+	span 
+	{
+		color: $flash1;
+	}
+
+	div.btn 
+	{
+		cursor: pointer;
+		width: 100%;
+		float:left;
+		font-family: 'Oswald';
+		color: $white;
+		padding: 7px 20px;
+		background-image: rgba(0, 0, 0, 0);
+		-webkit-font-smoothing: antialiased; 
+    	-moz-osx-font-smoothing: grayscale;
+
+		&:hover
+		{
+			background: #4a5456;
+		}
+
+		&.is-active
+		{
+			background: $flash1;
+			color: $white;
+		}
+	}
+}
+
+//Genres
+div.filter3 h4 { color: $flash3 !important; font-size: 0.9rem; i { font-size: 1rem; } }
+div.filter3-btn-grp
+{
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1rem;
+
+	span 
+	{
+		color: $flash3;
+	}
+
+	div.btn 
+	{
+		cursor: pointer;
+		width: 100%;
+		float:left;
+		font-family: 'Oswald';
+		color: $white;
+		padding: 7px 20px;
+		background-image: rgba(0, 0, 0, 0);
+		-webkit-font-smoothing: antialiased; 
+    	-moz-osx-font-smoothing: grayscale;
+
+		&:hover
+		{
+			background: #4a5456;
+		}
+
+		&.is-active
+		{
+			background: $flash3;
+			color: $white;
+		}
+	}
+}
+
+//Ena
+div.filter4 h4 { color: #db0045 !important; font-size: 0.9rem; i { font-size: 1rem; } }
+div.filter4-btn-grp
+{
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1rem;
+
+	span 
+	{
+		color: #db0045;
+	}
+
+	div.btn 
+	{
+		cursor: pointer;
+		width: 100%;
+		float:left;
+		font-family: 'Oswald';
+		color: $white;
+		padding: 7px 20px;
+		background-image: rgba(0, 0, 0, 0);
+		-webkit-font-smoothing: antialiased; 
+    	-moz-osx-font-smoothing: grayscale;
+
+		&:hover
+		{
+			background: #4a5456;
+		}
+
+		&.is-active
+		{
+			background: #db0045 !important;
+			color: $white;
+		}
+	}
+}
+
+//Industrie
+div.filter5 h4 { color: #1ec28c !important; font-size: 0.9rem; i { font-size: 1rem; } }
+div.filter5-btn-grp
+{
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1rem;
+
+	span 
+	{
+		color: #1ec28c;
+	}
+
+	div.btn 
+	{
+		cursor: pointer;
+		width: 100%;
+		float:left;
+		font-family: 'Oswald';
+		color: $white;
+		padding: 7px 20px;
+		background-image: rgba(0, 0, 0, 0);
+		-webkit-font-smoothing: antialiased; 
+    	-moz-osx-font-smoothing: grayscale;
+
+		&:hover
+		{
+			background: #4a5456;
+		}
+
+		&.is-active
+		{
+			background: #1ec28c;
+			color: $white;
+		}
+	}
+}
+
+//Politique
+div.filter6 h4 { color: #a91a8a !important; font-size: 0.9rem; i { font-size: 1rem; } }
+div.filter6-btn-grp
+{
+	width: 100%;
+	overflow: auto;
+	margin-bottom: 1rem;
+
+	span 
+	{
+		color: #a91a8a;
+	}
+
+	div.btn 
+	{
+		cursor: pointer;
+		width: 100%;
+		float:left;
+		font-family: 'Oswald';
+		color: $white;
+		padding: 7px 20px;
+		background-image: rgba(0, 0, 0, 0);
+		-webkit-font-smoothing: antialiased; 
+    	-moz-osx-font-smoothing: grayscale;
+
+		&:hover
+		{
+			background: #4a5456;
+		}
+
+		&.is-active
+		{
+			background: #a91a8a;
+			color: $white;
+		}
+	}
+}
+
+svg.close-article
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    // border-left: 5px solid $white;
+    // border-bottom: 5px solid $white;
+
+    .bg { fill: transparent; }
+    .cross { fill: $white; }
+
+    //&:hover .bg { fill: lighten($flash-color, 15%); }
+}
+
+div.gallery
+{
+	width: 100%;
+	margin-top: 1.5rem;
+	margin-bottom: 3rem;
+	position: relative;
+
+	div.gallery-navigation
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100px;
+		height: 50px;
+		background: $flash2;
+		@include transform(translate(-5px, -150%));
+
+		@include breakpoint(xs) {   
+			width: 80px;
+			height: 40px;
+			@include transform(translate(-2px, -120%));
+	    }
+		
+		div 
+		{
+			width: 50%;
+			float: left;
+			height: 100%;
+			text-align: center;
+			color: $white;
+			font-size: 2rem;
+			padding-top: 10px;
+			cursor: pointer;
+
+			@include breakpoint(xs) {   
+				padding-top: 6px;
+		    }
+
+			&:hover
+			{
+				background: lighten($flash2, 5%);
+			}
+		}		
+
+	}	
+	
+
+	div.picture
+	{
+		margin-right: 5px;
+		position: relative;  
+
+		div.overlay
+		{
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			//background: rgba(0, 0, 0, 0.5);
+			background: rgba(0, 0, 0, .3);
+			@include transition(all, 0.2s);
+			opacity: 0;
+		}
+
+		p.caption
+		{
+			position: absolute;
+			top: 0;
+			color: $white;
+			font-weight: 300;
+			// -webkit-font-smoothing: antialiased; 
+   // 		 	-moz-osx-font-smoothing: grayscale;
+   		 	font-size: 0.9rem;
+   		 	margin: 15px;
+   		 	padding: 30px;
+   		 	border: 1px solid $white;
+
+   		 	@include transition(all, 0.2s);
+			@include transform(scale(0.9));
+			opacity: 0;
+		}
+
+		&:hover
+		{
+			div.overlay
+			{
+				@include transition(all, 0.2s);
+				opacity: 1;
+			}
+
+			p.caption
+			{
+				@include transition(all, 0.2s);
+				@include transform(scale(1));
+				opacity: 0.8;
+			}
+		}
+	}
+
+	
+}
+
+.na
+{
+	opacity: 0.5;
+	img 
+	{
+		opacity: 0.7;
+	}
+	h2
+	{
+		opacity: 0.4;
+	}
+}
+
+h3.close-menu
+{
+	width: 100%;
+	font-weight: 400;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	background: $white;
+	color: #273032;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem;
+	font-size: 1.5rem;
+	display: none;
+	opacity: 1;
+	cursor: pointer;
+
+	@include breakpoint(xs) {   
+		display: block;
+    }
+}
+
+h3.open-menu
+    {
+    	@include transition(all 0.3s);
+    	width: 100%;
+    	font-weight: 400;
+    	position: fixed;
+    	bottom: 0;
+    	margin-bottom: 0;
+    	background: $red-fr;
+    	color: $white;
+    	text-transform: uppercase;
+    	text-align: center;
+    	padding: 1rem;
+    	font-size: 1.5rem;
+		display: none;
+		opacity: 1;
+		cursor: pointer;
+		z-index: 3;
+
+		@include breakpoint(xs) {   
+			display: block;
+	    }
+
+	    &.is-white
+	    {
+	    	background: $white;
+	    	@include transition(all 0.3s);
+	    }
+    }
+
+// .hint--top
+// {
+// 	font-family: 'Helvetica', 'Arial', 'sans serif' !important;
+// }

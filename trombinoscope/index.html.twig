@@ -1,0 +1,300 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+		{{ block('head_brand') }}
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+		<link rel="stylesheet" type="text/css" href="css/hint.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic|Oswald:400,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Poppins:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+	</head>
+
+	<script id="card-template" type="text/x-handlebars-template">
+	{% verbatim %}
+		{{#each cards}}
+	  		<div class="card {{cardFilter1Tri}} {{cardFilter2Tri}} {{cardFilter3Tri}} {{cardFilter4Tri}} {{cardFilter5Tri}} {{cardFilter6Tri}}" data-cardid="{{cardId}}">
+				<div class="card-header">
+					<img src="img/{{{cardImage}}}" alt=""> 
+				</div>
+				<div class="card-body">
+					<h2>{{{cardTitre}}}<br><span>{{{cardFilter1Display}}}</span></h2>
+					<h5>{{cardSubtitle}}</h5>
+						<!--<div class="card-body-info hint--top" data-hint="Parti"><i class="fa fa-users"></i><br>{{cardFilter1Display}}</div>-->
+						<div class="card-body-info hint--top" data-hint="Longévité politique"><i class="fa fa-hourglass"></i><br>{{cardFilter2Display}}</div>
+						<!--<div class="card-body-info hint--top" data-hint="Sexe"><i class="fa fa-venus-mars"></i><br>{{cardFilter3Display}}</div>-->
+						<div class="card-body-info hint--top" data-hint="Pronostic"><i class="fa fa-percent"></i><br>{{cardFilter6Display}}</div>
+						<div class="card-body-info hint--top" data-hint="A fait l'ENA"><i class="fa fa-briefcase"></i><br>{{cardFilter4Display}}</div>
+						<div class="card-body-info hint--top" data-hint="Expérience de l'entreprise"><i class="fa fa-industry"></i><br>{{cardFilter5Display}}</div>
+						
+				</div>
+			</div>
+		{{/each}}
+	{% endverbatim %}
+	</script>
+
+	<script id="detail-template" type="text/x-handlebars-template">
+		{% verbatim %}
+			<div class="visualisator-header" style="background-image: url('img/{{{cardImage}}}');">
+				<div class="visualisator-header-box">
+					<h1>{{{cardTitre}}}</h1>
+					<h5>{{{cardSubtitle}}}</h5>
+				</div>
+			</div>
+			<div class="visualisator-body">
+				
+				<h2 class="pratique">
+					<i class="fa fa-caret-right"></i>&nbsp;&nbsp;{{{cardInfo1}}}<br>
+					<i class="fa fa-caret-right"></i>&nbsp;&nbsp;{{{cardInfo2}}}
+				</h2>
+				<h2>
+					{{{cardSection1Title}}}
+				</h2>
+				<p>
+					{{{cardSection1Text}}}
+				</p>
+				<h2>
+					{{{cardSection2Title}}}
+				</h2>
+				<p>
+					{{{cardSection2Text}}}
+				</p>
+				<h2>
+					{{{cardSection3Title}}}
+				</h2>
+				<p>
+					{{{cardSection3Text}}}
+				</p>
+				<h2>
+					{{{cardSection4Title}}}
+				</h2>
+				<p>
+					{{{cardSection4Text}}}
+				</p>
+				<h2>
+					{{{cardSection5Title}}}
+				</h2>
+				<p>
+					{{{cardSection5Text}}}
+				</p>
+				<h2>
+					{{{cardSection6Title}}}
+				</h2>
+				<p>
+					{{{cardSection6Text}}}
+				</p>
+				<div class="btn">Fermer</div>
+			</div>
+		{% endverbatim %}
+	</script>
+
+	<body style="padding-top: {{ navBarOffset }};">
+
+		{{ block('bar_brand') }}
+		
+		<div class="overlay">
+			<img class="logo-lt-blanc" src="img/logo-lt-blanc.svg" alt="">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div> 
+
+		<h3 class="open-menu">Filtres</h3>
+
+		<div class="bg"></div>
+
+		<div class="overlay-content">
+			<div class="popup">
+				<h3>
+					Qui sera le candidat de la droite classique à l’Elysée en 2017?
+				</h3>
+				<p>
+					Avant la primaire «de la droite et du centre» des 20 et 27 novembre, retrouvez ici les 13 postulants, leur parcours, leur programme et leurs casseroles. Première sélection le 9 septembre!
+				</p>
+				<p>
+					Utilisez les filtres de la colonne de gauche pour trier les candidats.
+				</p>
+				<div class="btn">Découvrir les candidats</div>
+			</div>
+		</div>
+
+		<div class="reader">
+			<div class="visualisator">
+				
+			</div>
+		</div>
+
+		<aside>
+			<!--<h3>
+				Filtres
+			</h3>-->
+
+			<!-- <div class="filter1">
+				<h4>
+					Position politique <span><i class="fa fa-close"></i></span>
+				</h4>
+				<div class="filter1-btn-grp" data-filter-group="canton">
+					//<div class="btn" data-filter=".vs">Valais</div>
+					//<div class="btn" data-filter=".nejube">Neuchâtel - Jura - Berne</div>
+					//<div class="btn" data-filter=".ge">Genève</div>
+					//<div class="btn" data-filter=".vd">Vaud</div>
+					//<div class="btn" data-filter=".fr">Fribourg</div>
+					<div id="slider-range-max"></div>
+					<div class="btn" id="amount" data-filter=".fr">Nom du parti</div>
+				</div>
+			</div> -->
+
+			<div class="filter2">
+				<h4>
+					Longévité politique <span><i class="fa fa-close"></i>
+				</h4>
+				<div class="filter2-btn-grp" data-filter-group="theme">
+					<div class="btn" data-filter=".f-plus-20">+ de 20 ans</div>
+					<div class="btn" data-filter=".f-moins-20">- de 20 ans</div>
+				</div>
+			</div>
+
+			<div class="filter3">
+				<h4>
+					Par genre <span><i class="fa fa-close"></i>
+				</h4>
+				<div class="filter3-btn-grp" data-filter-group="theme">
+					<div class="btn" data-filter=".f-homme">Hommes</div>
+					<div class="btn" data-filter=".f-femme">Femmes</div>
+				</div>
+			</div>
+
+			<div class="filter4">
+				<h4>
+					Passé par l'ENA <span><i class="fa fa-close"></i>
+				</h4>
+				<div class="filter4-btn-grp" data-filter-group="theme">
+					<div class="btn" data-filter=".f-ena-oui">Oui</div>
+					<div class="btn" data-filter=".f-ena-non">Non</div>
+				</div>
+			</div>
+
+			<div class="filter5">
+				<h4>
+					Expérience de l'entreprise <span><i class="fa fa-close"></i>
+				</h4>
+				<div class="filter5-btn-grp" data-filter-group="theme">
+					<div class="btn" data-filter=".f-industrie-oui">Oui</div>
+					<div class="btn" data-filter=".f-industrie-non">Non</div>
+				</div>
+			</div>
+
+			<div class="filter6">
+				<h4>
+					Par pronostic <span><i class="fa fa-close"></i>
+				</h4>
+				<div class="filter6-btn-grp" data-filter-group="duree">
+					<div class="btn" data-filter=".f-symbolique">Symbolique</div>
+					<div class="btn" data-filter=".f-improbable">Improbable</div>
+					<div class="btn" data-filter=".f-bon">Bon</div>
+					<div class="btn" data-filter=".f-tres-bon">Très bon</div>
+				</div>
+			</div>
+
+			<h3 class="close-menu">
+				Fermer
+			</h3>
+
+		</aside>
+
+		<div class="content">
+
+			
+			<!-- <div class="card nejube sm ht">
+				<div class="card-header">
+					<img src="img/c1b1.jpg" alt="">
+				</div>
+				<div class="card-body">
+					<h2>Jura Short</h2>
+					<h5>Historique</h5>
+						<div class="card-body-info hint--top" data-hint="Région"><i class="fa fa-map-marker"></i><br>Jura</div>
+						<div class="card-body-info hint--top" data-hint="Durée"><i class="fa fa-clock-o"></i><br>1h30</div>
+				</div>
+			</div>
+
+			<div class="card vd sm sp">
+				<div class="card-header">
+					<img src="img/c1b1.jpg" alt="">
+				</div>
+				<div class="card-body">
+					<h2>Vaud Short</h2>
+					<h5>Historique</h5>
+						<div class="card-body-info hint--top" data-hint="Région"><i class="fa fa-map-marker"></i><br>Jura</div>
+						<div class="card-body-info hint--top" data-hint="Durée"><i class="fa fa-clock-o"></i><br>1h30</div>
+				</div>
+			</div>
+
+			<div class="card ge sm ae">
+				<div class="card-header">
+					<img src="img/c1b1.jpg" alt="">
+				</div>
+				<div class="card-body">
+					<h2>Genève Short</h2>
+					<h5>Historique</h5>
+						<div class="card-body-info hint--top" data-hint="Région"><i class="fa fa-map-marker"></i><br>Jura</div>
+						<div class="card-body-info hint--top" data-hint="Durée"><i class="fa fa-clock-o"></i><br>1h30</div>
+				</div>
+			</div>
+
+			<div class="card nejube md pr">
+				<div class="card-header">
+					<img src="img/c1b1.jpg" alt="">
+				</div>
+				<div class="card-body">
+					<h2>Jura Medium</h2>
+					<h5>Historique</h5>
+						<div class="card-body-info hint--top" data-hint="Région"><i class="fa fa-map-marker"></i><br>Jura</div>
+						<div class="card-body-info hint--top" data-hint="Durée"><i class="fa fa-clock-o"></i><br>1h30</div>
+				</div>
+			</div>
+
+			<div class="card fr md ht">
+				<div class="card-header">
+					<img src="img/c1b1.jpg" alt="">
+				</div>
+				<div class="card-body">
+					<h2>Fribourg Medium</h2>
+					<h5>Historique</h5>
+						<div class="card-body-info hint--top" data-hint="Région"><i class="fa fa-map-marker"></i><br>Jura</div>
+						<div class="card-body-info hint--top" data-hint="Durée"><i class="fa fa-clock-o"></i><br>1h30</div>
+				</div>
+			</div>
+
+			<div class="card nejube md sp">
+				<div class="card-header">
+					<img src="img/c1b1.jpg" alt="">
+				</div>
+				<div class="card-body">
+					<h2>Jura Medium</h2>
+					<h5>Historique</h5>
+						<div class="card-body-info hint--top" data-hint="Région"><i class="fa fa-map-marker"></i><br>Jura</div>
+						<div class="card-body-info hint--top" data-hint="Durée"><i class="fa fa-clock-o"></i><br>1h30</div>
+				</div>
+			</div> -->
+
+
+
+
+		</div>
+
+		{{ block('footer_brand') }}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+		<script src="js/handlebars-v4.0.4.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://npmcdn.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+	</body>
+	
+</html>

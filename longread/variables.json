@@ -1,0 +1,15 @@
+{
+	"title": "Des loups et des hommes",
+	"description": "Chronique d’une cohabitation réussie au Calanda",
+	"authors": "Aurélie Coulon, César Greppin",
+	"imgSocial": "social.jpg",
+
+	"navBarStyle": "black",
+	"navBarOffset": "0",
+	"navBarLocked": false,
+
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.letemps.ch/"
+	}
+}

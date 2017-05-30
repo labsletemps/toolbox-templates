@@ -1,0 +1,464 @@
+{% use '_blocks.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+
+		{{ block('head_brand') }}
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/loader.css" />
+		<link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+		<link rel="stylesheet" type="text/css" href="css/owl.theme.css" />
+		<link href='https://fonts.googleapis.com/css?family=Merriweather:400,900,400italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+
+	</head>
+	<body style="padding-top: {{ navBarOffset }};">
+		{{ block('bar_brand') }}
+		
+		<div class="overlay">
+			<img class="logo-lt-blanc" src="img/logo-lt-blanc.svg" alt="">
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		</div> 
+
+		<header>
+			<div class="header__gradient"></div>
+
+			<!-- <div class="video-wrapper">
+				<video loop muted>
+				  <source src="https://player.vimeo.com/external/176127115.hd.mp4?s=877fa83b9ebe740a4a06b5fe426bba40d4949b39&profile_id=119" type="video/mp4"> 
+				  Votre navigateur ne supporte pas les vidéos HTML%.
+				</video>
+			</div> -->
+
+			<div class="header__content">
+				<div class="header__content__container">
+					<div class="header__content__container__box">
+						<h1>Des loups et des hommes<br><span>Chronique d’une cohabitation réussie au Calanda</span></h1>
+						<img class="separateur" src="img/separateur.svg" alt="">
+						<h2>Un article d'<span>Aurélie Coulon</span></h2>	
+						<h2 class="social">
+							<a target="blank" href="https://www.facebook.com/sharer.php?u={{ app.url }}&display=popup&ref=plugin&src=share_button"><i class="fa fa-facebook"></i></a>
+							<a target="blank" href="https://twitter.com/intent/tweet?text={{ description ~ ' ' ~ app.url ~ ' '|url_encode }}&via=letemps"><i class="fa fa-twitter fa-middle"></i></a>
+							<a target="blank" href="https://www.linkedin.com/shareArticle?url={{ app.url }}&mini=true&title={{ title|url_encode }}&summary={{ description|url_encode }}&source={{ 'Le Temps'|url_encode }}"><i class="fa fa-linkedin"></i></a>
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="scroll-indicator">
+				<div class="scroll-indicator-inner"></div> 
+			</div>
+		</header>
+
+		<section class="">
+			<div class="container">
+
+				<h3>
+					Depuis 2012, un couple de loups se reproduit dans le massif du Calanda, qui surplombe Coire. Les hommes se sont organisés pour vivre aux côtés de la première meute de Suisse. 
+					<hr>
+				</h3>
+
+				<div class="spacer-small"></div>
+				<div class="spacer-small"></div>
+
+				<h4>
+					Aurélie Coulon (Texte/photos)<br><span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span> Coire - Suisse 
+				</h4>
+
+				<p>
+					La face orientale du massif se dessine plus précisément à mesure que le train se rapproche de Landquart: un mur de pierres, de prés et de forêts s’étend en un croissant montagneux sur une dizaine de kilomètres le long des eaux claires du Rhin. L’arrivée à Coire laisse le visiteur au pied de la chaîne du Calanda qui culmine à 2800 mètres d’altitude et se dresse littéralement aux portes du chef-lieu des Grisons. Ici les hommes et les femmes habitent et travaillent, font leurs courses ou paressent aux terrasses, là les loups parcourent les forêts, chassent les cerfs ou s’occupent de leurs petits.
+				</p>
+
+				<div class="block-content left">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption"><b>LE TERRITOIRE DE LA MEUTE DU CALANDA</b> s'étend sur 200 kilomètres carré à cheval sur les cantons des Grisons et de St-Gall.</div>
+				</div>
+
+				<p>
+					«On peut se demander si l’on évolue vers une situation d’équilibre», constate Georg Brosi, inspecteur de la chasse et de la pêche pour le canton des Grisons, que l’on rencontre dans son bureau. Au-dessus de la table trône une étrange toile peinte – une empreinte grandeur nature et faite à l’encre noire d’un corps de loup. L’artiste a moulé la surface d’une bête morte et l’a imprimée sur le papier blanc, explique le fonctionnaire. Les loups vivent et meurent parfois aussi dans les Grisons.
+				</p>
+
+				<p>
+					La présence des loups au Calanda remonte à la fin des années 90 et les premiers louveteaux sont nés en 2012 du couple formé par le mâle M30 et la femelle F07, toujours vivants aujourd’hui. «On estime que la meute compte entre 10 et 12 loups. Des meutes de cette taille sont courantes, en Allemagne notamment, rapporte Georg Brosi. Et leur territoire couvre une surface d’environ 200 kilomètres carrés à cheval sur le canton des Grisons et celui de Saint-Gall.» Chaque année depuis 2012, le couple donne naissance en mai à une portée de cinq à six louveteaux comme observé encore cette année. Tous ne survivent pas, la mortalité étant élevée chez les petits.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="chrono padding-bottom">
+
+			<div class="container">
+				<h3>Historique de la cohabitation</h3>
+			</div>
+
+			<div class="container special">
+				<div class="cd-horizontal-timeline">
+					<div class="timeline">
+						<div class="events-wrapper">
+							<div class="events">
+								<ol>
+									<li><a href="#0" data-date="01/01/1995" class="selected">1882</a></li>
+									<li><a href="#0" data-date="01/01/1998">1947</a></li>
+									<li><a href="#0" data-date="01/01/2000">1963</a></li>
+									<li><a href="#0" data-date="01/01/2004">1989</a></li>
+									<li><a href="#0" data-date="01/01/2007">1992</a></li>
+									<li><a href="#0" data-date="01/01/2008">1995</a></li>
+								</ol>
+								<span class="filling-line" aria-hidden="true"></span>
+							</div> 
+						</div> 
+
+						<ul class="cd-timeline-navigation">
+							<li><a href="#0" class="prev inactive">Prev</a></li>
+							<li><a href="#0" class="next">Next</a></li>
+						</ul> 
+					</div> 
+
+					<div class="events-content">
+						<ol>
+							<li class="selected" data-date="01/01/1995">
+		                        <h4>Retour du premier loup en Suisse dans le Val Ferret (VS)</h4>
+							</li>
+							
+							<li data-date="01/01/1998">
+		                        <h4>Premier tir illégal du loup mâle M01 à Reckingen (VS)</h4>
+							</li>
+
+							<li data-date="01/01/2000">
+		                        <h4>Premier tir légal du loup mâle M06 à Evolène (VS)</h4>
+							</li>
+
+							<li data-date="01/01/2004">
+		                        <h4>Première meute de loups en Suisse dans le massif du Calanda composée du couple M30/F07 et de leurs premiers louveteaux</h4>
+							</li>
+
+							<li data-date="01/01/2007">
+		                        <h4>Formation d'une deuxième meute par le couple de loups M47/F08 à Morrobia (TI)</h4>
+							</li>
+
+							<li data-date="01/01/2008">
+		                        <h4>Formation d'un troisième couple de loups M59/F14 vers Viège (VS)</h4>
+							</li>
+						</ol>
+					</div> 
+				</div>
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/ch1-inter.jpg')"><span>Nouveau territoire</span></section>
+		
+		<section>
+			<div class="container">
+
+				<p>
+					Mais même avec cela, la meute devrait être constituée du double d’animaux. Où sont passés les jeunes loups? «Neuf jeunes de la meute, deux femelles et cinq mâles, ont quitté le territoire depuis cinq ans, explique l’inspecteur de la chasse. Ils ont été identifiés par des analyses génétiques sur les traces qu’ils ont laissées ailleurs en Suisse et en Allemagne.» Une meute de loups ne croît pas exponentiellement: elle atteint un équilibre qui dépend de la quantité de proies présentes sur le territoire. La plus grande meute décrite dans la littérature comptait 20 individus. Des jeunes quittent la meute chaque année à la recherche d’un nouveau territoire et d’un(e) partenaire.
+				</p>
+
+				<div class="block-content left">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption"><b>LA FRONTIÈRE DU TERRITOIRE DE LA MEUTE</b> est marquée par le Rhin et l'autoroute.</div>
+				</div>
+
+				<p>
+					La proximité entre loups et activités humaines est frappante dans la vallée de Coire. Les habitations constellent la plaine à la base du massif, l’autoroute et le chemin de fer parallèles au Rhin frôlent le coteau, des sentiers touristiques sillonnent la montagne et des moutons paissent çà et là. «Les loups sont acceptés par la population du Calanda mais pas tout près des villages, concède notre interlocuteur. Il faut pouvoir intervenir et donner l’autorisation aux bergers et aux gardes-faune de tirer une bête afin de ménager la sensibilité des riverains.» Les hivers passés de 2013 et 2014 ayant été rigoureux, les loups s’étaient approchés des villages dans la vallée, à la recherche de nourriture. La Confédération avait alors donné l’autorisation de tirer deux bêtes. Mais les loups ne s’étant pas montrés cette année, l’autorisation a été levée en avril dernier.
+				</p>
+				
+			</div>
+		</section>	
+	
+		<section class="gallery double">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>LA VALLÉE DU RHIN</b> près de Felsberg (GR).
+					</div>
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption">
+						<b>DES PANNEAUX DE SENSIBILISATION</b> indiquent le comportement à adopter par les randonneurs en présence des chiens de protection de troupeaux.
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="">
+			<div class="container">
+
+				<p>
+					Selon Georg Brosi, si la cohabitation avec le loup fonctionne si bien dans les Grisons, c’est entre autres grâce au suivi effectué par son équipe de gardes-chasse. Ces derniers organisent une à deux battues chaque hiver pour collecter des traces de loups dans la neige. Ils tiennent également un rapport de toutes les observations recueillies chaque mois, une trentaine environ. La protection des troupeaux face aux loups est l’autre succès revendiqué aux Grisons. Les dégâts sont faibles: entre 2001 et 2015, 18 dommages ont été déclarés sur un secteur qui compte plus de 1500 ovins en pâture. Le montant des dédommagements s’est élevé à 5240 francs pour l’année 2015. Georg Brosi explique que les loups ont suffisamment de nourriture au Calanda, la montagne étant riche en cerfs. «Depuis que le loup est ici, la quantité de cerfs tirés par les chasseurs n’a diminué que d’environ 20%», ajoute-t-il en soulignant que cette diminution est moins importante que ce que veulent laisser croire les chasseurs.
+				</p>
+
+			</div>
+		</section>	
+
+		<section class="gallery big padding-bottom">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>PORTRAIT D'UN LOUP DU CALANDA</b> pris au piège photographique près de Haldenstein le 17 mai 2016.
+				</div>
+			</div>
+		</section>
+
+		<section class="inter-titre " style="background: url('img/ch2-inter.jpg')"><span class="">Berger, clôtures et chiens</span></section>
+
+		<section class="">
+			<div class="container">
+
+				<p>
+					Le succès de la protection des troupeaux repose principalement sur les épaules d’un seul homme, Jan Boner, lui-même éleveur de moutons. Il sillonne la région pour conseiller les paysans qui veulent protéger leurs troupeaux et aider à la formation des chiens de protection. Ces derniers sont plus de 70 dans les Grisons, répartis dans 24 exploitations. Nous le retrouvons à l’école d’agriculture de Landquart. Il sort une carte du Calanda, territoire de la meute de loups, où figurent des cercles – les lieux d’estivage des troupeaux – avec le nombre de chiens, et des triangles – les attaques recensées. Dans le secteur des Grisons figurent trois triangles, des événements survenus entre 2010 et 2013.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery big ">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>JAN BONER</b> rend visite à une bergère du Calanda.
+				</div>
+			</div>
+		</section> 
+
+		<section class="">
+			<div class="container">
+
+				<p>
+					«Pour chacune de ces attaques, une des dispositions indispensables pour la protection manquait», explique Jan Boner. La combinaison gagnante selon lui: le berger constamment présent, des clôtures et des chiens. Ici, dit-il en pointant une zone près du village de Felsberg, paissaient 350 moutons en pâturage tournant [les bêtes sont déplacées toutes les deux semaines, ndlr] avec trois chiens de protection, mais sans berger. Là, tout près de l’endroit où nous nous trouvons, un loup a attaqué un troupeau en 2013 alors qu’il n’y avait aucune clôture. Et ici, sur le territoire de la meute, les chiens n’étaient plus adaptés, pas assez nombreux et trop vieux.
+				</p>
+
+				<p>
+					«Depuis l’arrivée du loup il y a 20 ans, on a perdu 22 animaux de rente dans des systèmes protégés dans les Grisons, relate l’éleveur. On est convaincu que ces dispositifs fonctionnent. Les clôtures doivent cependant être totalement électrifiées et adaptées au sol. La hauteur n’a pas d’importance, les loups ne sautant pas de manière innée. Ils doivent apprendre à sauter. Ce n’est jamais arrivé en 20 ans.» Et si ça arrivait? Il faudrait abattre ce loup pour éviter qu’il ne montre comment faire à ses congénères…
+				</p>
+				
+			</div>
+		</section>
+
+		<section class="gallery double ">
+			<div class="layout">
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						Deux variantes de la montre Eco Drive One, édition limitée.
+					</div> -->
+				</div>
+				<div class="layout-inner">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<!-- <div class="caption">
+						<b>PHOTOS PRISES PAR FARHAD</b> , avec son téléphone, de l’appartement dans lequel il a vécu clandestinement pendant deux mois au centre d’Athènes.
+					</div> -->
+				</div>
+			</div>
+		</section>
+
+		<section class="">
+			<div class="container">
+
+				<p>
+					Il est temps de rejoindre les alpages du Calanda. Jan Boner souhaite s’assurer que tout se passe bien pour une jeune bergère qui s’occupe d’un troupeau d’un millier de moutons à 2200 mètres d’altitude, en plein cœur du territoire des loups. Les animaux de rente sont protégés par un groupe de six chiens, quatre chiens de montagne des Pyrénées et deux chiens d’Anatolie, une race récemment ramenée de Turquie par le spécialiste.
+				</p>
+
+				<p>
+					L’ascension se fait depuis le village de Flims, situé à l’extrémité sud-ouest du massif. A cet endroit, sur une portion de quelques kilomètres depuis le village de Tamins, il n’y a plus ni autoroute ni chemin de fer – tous deux ont plongé vers le sud. Or ces deux infrastructures servent de frontières naturelles au déplacement des loups. C’est donc sur cette zone que les loups quittent le plus souvent le massif du Calanda pour d’autres secteurs.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery big">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>LA CABANE DU BAS DE L'ALPAGE</b> aux mille moutons.
+				</div>
+			</div>
+		</section>
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<p>
+					La route caillouteuse et sinueuse gravit le col en suivant le vallon d’un torrent, l’Awa da Moulins, qui est flanqué par de hautes façades rocheuses mouillées de cascades. Au dernier lacet, on découvre une prairie d’altitude où s’amasse un troupeau de bovins. Ils ralentissent la progression de la voiture que l’on gare à côté d’une cabane. On referme précautionneusement l’enceinte de la clôture électrique qui protège le petit édifice, et la voiture par la même occasion. «La semaine dernière, un randonneur est mort, tué par une vache, raconte notre guide. Il s’était mis entre elle et son petit. Les gens sous-estiment les risques avec ces bêtes.» Selon lui, les vaches sont le premier danger en montagne, le deuxième étant les chutes de pierre.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="inter-titre" style="background: url('img/ch3-inter.jpg')"><span class="">Curieux mais pas agressif</span></section> 
+
+		<section class="">
+			<div class="container">
+				
+				<p>
+					Après une ascension d’une trentaine de minutes, on distingue la cabane inférieure de l’alpage et les premiers moutons blancs à tête noire qui se confondent avec les pierres. Nous scrutons le paysage à la recherche des chiens. «On veut qu’en présence des loups, certains chiens demeurent avec le troupeau et que d’autres viennent au devant, détaille l’homme qui marche à vive allure. Cela ne sert à rien que les chiens aboient car ils renseignent les loups sur leur présence.» Et au-devant des hommes, ils doivent adopter un comportement curieux mais non agressif.
+				</p>
+				
+			</div>
+		</section>
+
+		<section class="gallery big ">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>WALLACE LE BERGER DES PYRÉNÉES</b> est un des six chiens protecteurs de troupeaux en charge de protéger les mille moutons.
+				</div>
+			</div>
+		</section> 
+
+		<section class="">
+			<div class="container">
+				
+				<p>
+					A une centaine de mètres, un point blanc se détache, quelques aboiements se font entendre parmi les bêlements des moutons. Un gros chien blanc court vers nous. Il nous accueille joyeusement, battant l’air de sa queue. Plus tard, deux de ses compères apparaissent. Il nous faut laisser passer une partie du troupeau pour continuer l’ascension vers la deuxième cabane où loge la bergère pendant les quatre mois de l’été. Elle bouge les moutons toutes les deux semaines, déplaçant des mètres de clôture mobile, parfois dans des endroits escarpés pour éviter la chute de ses bêtes.
+				</p>
+
+				<div class="block-content right">
+					<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+					<div class="caption"><b>DEBRIEFING</b>. Theresa informe Jan du comportement inhabituel d'un chien.</div>
+				</div>
+
+				<p>
+					On aboutit à la cabane, une bicoque de bois lovée contre le flanc d’un petit cirque glaciaire. Une jeune femme brune et menue nous accueille, suivie de ses deux border collies. Jan Boner et Theresa, la bergère, s’entretiennent des jours passés. Elle n’a rien vu d’inhabituel même lorsqu’elle est sortie une nuit, réveillée par les aboiements de ses chiens.
+				</p>
+
+				<p>
+					Theresa explique aussi qu’un des grands chiens gris d’Anatolie ne reste presque plus avec le troupeau et préfère sa compagnie près de la cabane. Entendant cela, l’éleveur s’élance pour chasser l’animal et le forcer, à force de grands gestes et de cris qui résonnent dans le cirque, à rejoindre les moutons qui paissent plus en amont.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="gallery big ">
+			<div class="layout">
+				<img class="zoom lazy" data-original="img/lazy-placeholder.jpg">
+				<div class="caption">
+					<b>THERESA SOIGNE UNE BREBIS</b> devenue aveugle suite à une infection aux yeux.
+				</div>
+			</div>
+		</section> 
+
+		<section class="padding-bottom">
+			<div class="container">
+
+				<p>
+					Pendant ce temps-là, Theresa confie qu’en cinq saisons sur cet alpage, elle n’a jamais eu de problème avec les loups, ni ne les a même jamais vus. Mais un bêlement la rappelle alors à son devoir: une brebis est attachée à un piquet. «Elle est devenue aveugle à cause d’une infection qui a touché tout le troupeau. Je la soigne depuis plusieurs jours», explique la jeune femme tout en saisissant la bête pour l’ausculter. La maladie de ses moutons plus que les loups préoccupe la bergère. La cohabitation des prédateurs avec le troupeau bien protégé semble ainsi possible.
+				</p>
+
+			</div>
+		</section>
+
+		<section class="numbers padding-bottom">
+			<div class="container">
+				<h3 class="inter-titre">Quelques chiffres</h3>
+				<div class="tiers">
+					<h1><i>250</i><span>loups environ dans les Alpes en 2016</span></h1>
+				</div>
+				<div class="tiers">
+					<h1><i>300</i><span>km2 de territoire par meute dans les Alpes</span></h1>
+				</div>
+				<div class="tiers">
+					<h1><i>25</i><span>bêtes vivaient en Suisse en 2015 selon le WWF</span></h1>
+				</div>
+				<div class="tiers">
+					<h1><i>16</i><span>loups dans la meute du Calanda en 2016</span></h1>
+				</div>
+				<div class="tiers">
+					<h1><i>18</i><span>animaux de rente attaqués par les loups entre 2001 et 2015</span></h1>
+				</div>
+				<div class="tiers">
+					<h1><i>1500</i><span>ovins paissent dans les alpages grisons</span></h1>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<!-- <hr class="end"> -->
+			<div class="container">
+
+				<h5>Nos grands formats</h5>
+
+				<div class="row">
+					<a href="https://labs.letemps.ch/interactive/2016/montre-suisse/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-montre.jpg');"></div>
+							<div class="caption">Comment j'ai fabriqué ma montre en 8 heures</div>
+						</div>
+					</a>
+
+					<a href="https://labs.hebdo.ch/interactive/2016/longread-horlogerie-japonaise/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-horlogerie-japonaise.jpg');"></div>
+							<div class="caption">Horlogerie japonaise – A la conquête du monde</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="row">
+					<a href="https://labs.letemps.ch/interactive/2016/longread-gothard/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_gothard.jpg');"></div>
+							<div class="caption">Les oubliés du Gothard</div>
+						</div>
+					</a>
+					<a href="https://labs.letemps.ch/interactive/2016/tchernobyl-30-ans/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb-tchernobyl.jpg');"></div>
+							<div class="caption">30 ans après, voyage au cœur de la zone </div>
+						</div>
+					</a>
+				</div>
+
+				<div class="row">
+					<a href="https://labs.letemps.ch/interactive/2016/shenzhen/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/thumb_shenzhen.jpg');"></div>
+							<div class="caption">Shenzhen, de la fumée des usines aux ateliers d'artistes</div>
+						</div>
+					</a>
+					<a href="https://labs.letemps.ch/interactive/2015/led/" target="blank">
+						<div class="teaser">
+							<div class="teaser-bg" style="background: url('img/led-thumb.jpg');"></div>
+							<div class="caption">L’étonnante biodiversité des tiroirs des musées</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+
+			<div class="credits">
+				Réalisation web: César Greppin
+			</div>
+		</footer>
+		
+		{{ block('footer_brand') }}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+        <script src="js/jquery.lazyload.js?v=1.9.7"></script>
+        <script src="js/intro-control.js"></script>
+        <script src="js/viewport.js"></script>
+        <!--<script src="js/timeline-control.js"></script>-->
+        <script src="js/owl.carousel.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/timeline.js"></script>
+        <script src="js/video-control.js"></script>
+        <script src="js/graphs-control.js"></script>
+        <!--<script src="js/hero-control.js"></script>-->
+        <script src="js/zoom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
+
+	</body>
+</html>

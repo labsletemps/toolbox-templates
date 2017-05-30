@@ -1,0 +1,135 @@
+.row { width: 100%; overflow: auto; }
+.zoom { cursor: pointer; @include breakpoint(lg) { cursor: default; } }
+.no-margin { margin-bottom: 0 !important; }
+
+.overlay   
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    z-index: 1001;
+
+    .logo-lt-blanc
+    {
+        width: 300px;
+        max-width: 85%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -110%));
+    }
+}
+
+.scroll-indicator
+{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 5;
+    @include transform(translateX(-50%));
+
+    &-inner
+    {
+        @include triangle(80px, $white, up);
+    }
+}
+
+.spacer-small
+{
+    width: 100%;
+    height: 15px;
+    overflow: auto;
+
+    @include breakpoint(md) { 
+        height: 10px;
+    }
+}
+
+canvas
+{
+    opacity: 0;
+    width: 100%;
+    @include transition(opacity, 0.8s);
+
+    &.is-visible
+    {
+        opacity: 1 !important;
+        @include transition(opacity, 0.8s);
+    }
+               
+}
+
+.id 
+{
+    .id-header
+    {
+        position: relative;
+
+        .quote //h3
+        {
+            position: absolute;
+            bottom: 0;
+            text-shadow: rgba(0, 0, 0, 0.6) 0 1px 8px, rgba(0, 0, 0, 0.6) 0px 0px 1px;
+            color: $white;
+            padding: 10px;
+            font-size: 22px;
+            line-height: 30px;
+            text-align: center;
+        }
+    }
+    
+    .id-body
+    {
+       // padding: 10px;
+
+        .caption
+        {
+            position: initial !important;
+            font-family: $font2;
+            color: #505050;
+            margin-top:17px;
+            width: 100% !important;
+            font-size: 11px;
+            line-height: 17px;
+            padding: 0 !important;
+
+            // @include breakpoint(md) { 
+            //     text-align: left;
+            //     width: 70%;
+            // }
+        }
+
+
+    }
+}
+
+section .video-wrapper
+{
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    margin: auto;
+    
+    .trigger
+    {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+        height:4px;
+        width: 100%;
+        background: red;
+    }
+
+    video 
+    {
+      left: 0;
+      object-fit: cover;
+      top: 0;
+      width: 100%;
+    }
+}
